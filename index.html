@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <img class="bg-desktop" src="images/bg-main-desktop.png" alt="" />
+    <img class="bg-mobile" src="images/bg-main-mobile.png" alt="" />
+
+    <div class="container">
+      <div class="credit-card">
+        <div class="card-front">
+          <img src="images/bg-card-front.png" alt="" />
+          <img class="logo" src="images/card-logo.svg" alt="" />
+          <div class="text-front">
+            <h1 id="card-number">1234 5678 9123 0000</h1>
+            <div class="credit-card-wrapper">
+              <p id="card-name">Jane Appleseed</p>
+              <div class="date-wrapper">
+                <p id="card-month">MM</p>
+                /
+                <p id="card-year">YY</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-back">
+          <img class="credit-card-back" src="images/bg-card-back.png" alt="" />
+          <div class="text-back">
+            <p id="card-cvc">000</p>
+          </div>
+        </div>
+      </div>
+      <form id="form" action="#">
+        <div class="form-wrapper">
+          <h1>Cardholder Name</h1>
+          <input type="text" name="name" id="name" placeholder="Jane Appleseed" />
+          <p class="error-message">Enter the correct name</p>
+        </div>
+        <div class="form-wrapper">
+          <h1>Card Number</h1>
+          <input type="text" name="number" id="number" placeholder="1234 5678 9123 0000" />
+          <p class="error-message">Enter all the numbers</p>
+        </div>
+        <div class="form-date-wrapper">
+          <h1>Exp. Date (MM/YY)</h1>
+          <input type="text" name="month" id="month" placeholder="MM" />
+          <input type="text" name="year" id="year" placeholder="YY" />
+          <p class="error-message">Enter the correct date</p>
+        </div>
+        <div class="cvc-wrapper">
+          <h1>CVC</h1>
+          <input type="text" name="cvc" id="cvc" placeholder="000" />
+          <p class="error-message">Enter the correct CVC</p>
+        </div>
+        <button type="submit">Confirm</button>
+      </form>
+      <div id="validation">
+        <img src="images/icon-complete.svg" alt="" />
+        <h1>Thank you!</h1>
+        <p>We've added your card details</p>
+        <button id="page-refresh">Continue</button>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
