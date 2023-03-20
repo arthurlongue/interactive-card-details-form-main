@@ -15,9 +15,7 @@ $Verydarkviolet: hsl(278, 68%, 11%)
 
 body
   display: flex
-  justify-content: center
   height: 100vh
-  position: relative
 
 .bg-desktop
   position: absolute
@@ -34,7 +32,6 @@ body
   justify-content: space-between
   align-items: center
   width: 100%
-  max-width: 1440px
 
 .card-front
   white-space: nowrap
@@ -89,20 +86,35 @@ form
   grid-template-columns: 1fr 1fr
   color: $Verydarkviolet
   font-size: .5em
-  white-space: nowrap
-  align-items: center
   margin-right: 5%
+  padding: 3em
+
   h1
     margin-bottom: 5px
   .form-wrapper
+    display: flex
+    flex-direction: column
     grid-column: 1/3
   .form-date-wrapper
+    display: flex
+    flex-direction: column
     grid-column: 1
   .cvc-wrapper
-    width: 99%
+    display: flex
+    flex-direction: column
     grid-column: 2/3
   button
     grid-column: 1/3
+
+span
+  display: flex
+
+#month
+  max-width: 70px
+  margin-right: .5em
+#year
+  max-width: 70px
+  margin-right: .5em
 
 input
   all: unset
@@ -111,9 +123,7 @@ input
   height: 35px
   font-size: 12px
   padding-left: 5px
-
   cursor: pointer
-  width: 99.5%
 input:focus
   outline: solid 2px $Verydarkviolet
 
@@ -123,19 +133,11 @@ input:focus
   color: $Red
   margin-top: .3em
 
-#month
-  width: 70px
-  margin-right: 15px
-#year
-  width: 70px
-  margin-right: 15px
-
 button
   all: unset
   color: $White
   background-color: $Verydarkviolet
   border-radius: 5px
-  width: 100%
   text-align: center
   height: 40px
   cursor: pointer
@@ -147,12 +149,11 @@ button
 
   .container
     flex-direction: column
-    max-width: 500px
-    margin: auto
+    justify-content: center
 
   .credit-card
     width: 100px
-    height: 200px
+    height: 50px
 
   .card-front
     left: 5%
@@ -175,8 +176,7 @@ button
       width: 280px
 
   form
-    width: 80%
-    margin-top: 10%
+    margin-top: 20%
     margin-right: 0
 
   #validation
@@ -189,6 +189,7 @@ button
     display: block
     position: absolute
     top: 0
+    right: -20px
     z-index: -1
-    width: 100%
-    max-height: 245px
+    width: 110vw
+    max-height: 280px
